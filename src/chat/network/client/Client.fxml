@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2016 Giovanni Scanferla
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.network.client.ClientController">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="75.0" maxWidth="400.0" minHeight="75.0" minWidth="400.0" prefHeight="75.0" prefWidth="400.0" style="-fx-background-color: #353535;" text="CHAT" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="42.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox fx:id="vbDisplay" alignment="TOP_CENTER" fillWidth="false" maxWidth="400.0" minWidth="400.0" prefWidth="400.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" maxHeight="75.0" maxWidth="400.0" minHeight="75.0" minWidth="400.0" prefHeight="75.0" prefWidth="400.0" style="-fx-background-color: #353535;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextField fx:id="tfMessage" focusColor="WHITE" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="300.0" promptText="Message..." style="-fx-text-fill: WHITE; -fx-prompt-text-fill: #4d4d4d;" />
+            <JFXButton onAction="#sendMessage" style="-fx-background-color: WHITE;" text="SEND" textFill="#363636" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
+
